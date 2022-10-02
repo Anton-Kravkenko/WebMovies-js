@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.filter_element:hover {
+  background-color: #F37515;
+    cursor: pointer;
+}
+.Filter_block {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.filter_element {
+    padding: 15px 25px 15px 25px;
+  border-radius: 17px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+   margin-top: 20px;
+    margin-right: 20px;
+  background-color: #2F3338;
+  border: none;
+  color: white;
+  transition: all linear .30s;
+    -webkit-transition: all linear .30s;
+ 
+}
+.Main__wraper_Content {
+    padding:25px;
+  padding: 25px;
+}
+.First_text {
+    font-family: 'Outfit', sans-serif;
+  color: white;
+
+
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.Left_sitebar_icons:hover {
+  color: white;
+  background-color: #282C31;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+      transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+  
+    
+}
+
+.Movie_name_text {
+  color: white;
+  font-weight: 600;
+  font-size: 40px;
+}
+.Description_text {
+   color: white;
+  font-weight: 300;
+  font-size: 15px;
+ text-overflow: ellipsis;
+  max-width: 500px;
+  overflow: hidden;
+  
+  margin-bottom: 10px;
+}
+.info_content_text {
+   color: white;
+   font-weight: 600;
+  font-size: 16px;
+}
+.Film_Map_content{
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+ background-position: center;
+ padding-left: 10px;
+position: relative;
+background-size: cover;
+
+}
+
+.MainBaners {
+  display: flex;
+  gap: 30px;
+  
+}
+.Film_Map_content:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.9) 100%);
+}
+.Text_content_baner {
+  position: absolute;
+bottom: 30px;
+left: 20px;
+}
+
+.Left_sitebar_icons {
+color: #535458;
+    font-size: 35px;
+    margin: auto;
+    margin-top: 25px;
+  padding:10px ;
+      transition-property: all;
+  transition: all ease 1s;
+    
+}
+
+
+@keyframes rotations {
+  from {
+   transform: rotateZ(-5deg);
+  }
+
+  to {
+   transform: rotateZ(5deg);
+  }
+  
+  
+  
+}
+.News_Maping_content_block {
+background-color: white;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+ animation: rotations;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.Orange_back {
+  background-color: #F47410;
+  border-radius: 20px;
+}
+
+
+
+
+.Text__down_image {
+  display: flex;
+  align-items: center;
+ margin-top: 10px;
+  justify-content: space-between;
+  
+}
+
+.Image_in_Films_block {
+  height: 200px;
+  border-radius: 30px;
+  object-fit: cover;
+  width: 330px;
+}
+
+.Film_render_Names {
+color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Film_render_years_rating{
+  color: #535458;
+}
+
+body .swiper-button-next, .swiper-button-prev {
+  color: white !important;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: auto;
+right: 50px !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 25px !important;
+}
+.Film_renders_swiper_element {
+  display: flex;
+ 
+  margin-top: 30px;
+}
+
+.swiper-slide {
+width: initial !important;
+}
+
+
+.Image_in_news {
+  height: 230px;
+  background-size: cover;
+  margin: 0 auto;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.Hot_news_text {
+  color: #F27614;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.News_name_text {color: #1C2023;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.date_news_text {
+  color: #282C31;
+  font-size: 15px;
+}
+
+
+
+.Wrapper {
+    display: flex;
+  min-height: 100vh;
+
+}
+
+.Main__wraper_Content {
+    background-color: #1C2023;
+  margin-left: 10%;
+  width: 100%;
+overflow: hidden;
+}
+.exit {
+  margin-bottom: 45px;
+}
+
+.Specialforyou{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.Main__wraper {
+    height: 100vh;
+    width: 10%;
+  display: flex;
+justify-content: space-between;
+flex-direction: column;
+  position: fixed;
+  
+  
+  z-index: 100;
+
+ 
+    background-color: #1F2326;
+}

@@ -35,11 +35,204 @@
 
 
 }
+.first_name_addtoBookmark {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+
+}
+.Film_render_Names1{
+  font-size: 30px;
+  color: white;
+}
+
+.interesting_fact_about_film {
+
+}
+.Hot_Film_in_film_page {
+  color: #F27614;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.Text_in_film_block_all_fact {
+color: #1C2023;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.Film_interesting_fact {
+  background-color: white;
+max-width: 400px;
+padding: 20px;
+border-radius: 20px;
+animation: rotations;
+  animation-duration: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+animation-duration: 1.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+height: 91%;
+position: inherit;
+}
+.Main_film_and_fact_wrapeer {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.Film_image_in_movie_page {
+width: 70%;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.add_to_save_in_movie_app {
+ color: white;
+  padding: 15px 20px 15px 20px;
+  background-color: #F37515;
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Form_name_text {
+  color: white;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+.Form_in_add_film_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 10px;
+  width: 500px;
+
+}
+.add_film_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.Name_in_add_film {
+padding: 10px;
+
+}
+.Years_in_add_film {
+padding: 10px;
+}
+.genre_in_add_film {
+padding: 10px;
+}
+.duration_in_add_film {
+padding: 10px;
+}
+.Desk_in_add_film {
+resize: none;
+}
+
+
+.rating_in_add_film {
+padding: 10px;
+}
+.fite_in_add_film {
+  color: white;
+  border: none;
+}
+.button_in_add_film {
+padding: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #F27614;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Form_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.Link_in_Register_and_login_page {
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.Error_message_in_register_and_login_page {
+  color: red;
+    font-size: 15px;
+  text-align: left;
+}
+
+.Happy_message {
+  color: greenyellow;
+  font-size: 15px;
+   text-align: left;
+}
+
+.Form_wrapper form {
+  display: flex;
+flex-direction: column;
+  gap: 7px;
+max-width: 220px;
+width: 220px;
+}
+
+.Form_wrapper form input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #1C2023;
+  
+  
+}
+
+.Btn_in_form {
+    border: none;
+  background-color: #F27614;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 * {
     font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+.Go_back_in_movie_page {
+  color: white;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.none {
+  display: none;
 }
 
 .block {
@@ -49,7 +242,23 @@
 .flex {
     display: flex;
 }
+.Film_Wrapeer {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+}
+.Film_render_main_block {
+  width: 30%;
+}
 
+.SearchValue {
+ padding: 18px 15px 15px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #2F3338;
+  border: none;
+  color: white;
+}
 
 .Left_sitebar_icons:hover {
   color: white;
@@ -165,11 +374,20 @@ background-color: white;
   
 }
 
+
+
+.Image_in_Films_block_search {
+   border-radius: 30px;
+  height: 35vh;
+  object-fit: cover;
+  width: 100%;
+}
+
 .Image_in_Films_block {
   height: 200px;
   border-radius: 30px;
   object-fit: cover;
-  width: 330px;
+  width: 340px;
 }
 
 .Film_render_Names {

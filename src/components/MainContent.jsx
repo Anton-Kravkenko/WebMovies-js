@@ -1,68 +1,67 @@
-import axios from "axios";
-import React, {useEffect} from 'react';
+
+import React from 'react';
+import {Link} from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
 import 'swiper/css/parallax';
 import "swiper/css/free-mode";
 import { Navigation, Parallax, A11y, FreeMode } from 'swiper';
 import 'swiper/css';
-function MainBlock() {
-	const [Film, setFilm] = React.useState([]);
-		const [News, setNews] = React.useState([]);
-	useEffect(() => {
 
-axios.get('https://633689678aa85b7c5d2e0915.mockapi.io/Movie/').then(function (response) {
-		setFilm(response.data)
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-		
-		axios.get('https://633689678aa85b7c5d2e0915.mockapi.io/News').then(function (response) {
-		setNews(response.data)
-	 
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-}, [])
+function MainBlock({Film, News, filteringAll, filteringComedy, filteringFantasy, filteringShoter, filteringHorror, filteringDrama,}) {
 	
-	
+	function getMultipleRandom(arr, num) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
 
-	
+  return shuffled.slice(0, num);
+}
 
-	
+
 	return (
 		<div className='Main__wraper_Content'>
 		<h1 className='First_text'>AntonKrav Cinema</h1>
 			<div className='Filter_block'>
-			<button className='filter_element'>🍟 All</button>
-						<button className='filter_element'>🙄 Fantasy</button>
-						<button className='filter_element'>🤣 Comedy</button>
-						<button className='filter_element'>💣 Shoter</button>
-						<button className='filter_element'>😱 Horror</button>
-		<button className='filter_element'>😭 Drama</button>
+				<Link to="Search"><button className='filter_element' onClick={filteringAll}>🍟 All</button></Link>
+					<Link to="Search">	<button  className='filter_element'   onClick={filteringFantasy} >🙄 Fantasy</button></Link>
+					<Link to="Search">	<button className='filter_element' onClick={filteringComedy}>🤣 Comedy</button></Link>
+					<Link to="Search"><button className='filter_element' onClick={filteringShoter}>💣 Shoter</button></Link>
+					<Link to="Search">	<button className='filter_element' onClick={filteringHorror}>😱 Horror</button></Link>
+					<Link to="Search"><button className='filter_element' onClick={filteringDrama}>😭 Drama</button></Link>
+		
 			</div>
 			
 			<div className='MainBaners'>
 				
-			 {Film.slice(4,5).map(items => (
+			 {getMultipleRandom(Film, 1).map(items => (
 
-        <div className="Film_Map_content" key={items.id}  style={{  backgroundImage: `url(${items.MovieAvatar})` }} >
-	        <div className='Text_content_baner'>
+        <div className="Film_Map_content"   style={{  backgroundImage: `url(${items.MovieAvatar})` }} >
+	        	<Link to={"/movie-details"}
+ state={{ MovieName: items.MovieName,
+          MovieAvatar: items.MovieAvatar,
+	        YearsOld: items.YearsOld,
+	        rating: items.rating,
+	 Desk: items.Description,
+  Genre: items.genre,
+Duration: items.Duration,
+	 id: items.id,
+	 	 Video: items.video,
+ }}
+	>
+	        <div className='Text_content_baner' key={items.id}>
 	 <h1 className='Movie_name_text'>{items.MovieName}</h1>
 	        <h4  className='Description_text'>{items.Description.slice(0,135)}...</h4>
 	        <p className='info_content_text'>{items.YearsOld} | {items.genre} | {items.Duration}</p>
 		        </div>
+	        </Link>
         </div>
 
       ))}
 			
 			
-							 {News.slice(0,1).map(News => (
+							 {getMultipleRandom(News, 1).map(News => (
 								 <div className='Orange_back'  key={News.id} >
         <div className="News_Maping_content_block" >
-		<img src={News.NewsBaner} className='Image_in_news' />
+		<img src={News.NewsBaner} className='Image_in_news' alt="news!" />
 	         <h1 className='Hot_news_text'>🔥 Hot News!</h1>
 	 <h1 className='News_name_text'>{News.Newsname}</h1>
 	        <p className='date_news_text'>{News.Data}</p>
@@ -78,10 +77,8 @@ axios.get('https://633689678aa85b7c5d2e0915.mockapi.io/Movie/').then(function (r
 			
 			
 			
-			
 			<div className='Film_renders_swiper_element'>
-				    <Swiper freeMode={true}
-				            modules={[Navigation, Parallax, FreeMode,A11y ]}
+				    <Swiper freeMode={true} modules={[Navigation, Parallax, FreeMode,A11y ]}
       spaceBetween={30}
       slidesPerView={"auto"}
        parallax
@@ -89,12 +86,27 @@ axios.get('https://633689678aa85b7c5d2e0915.mockapi.io/Movie/').then(function (r
     >
 			{Film.map(items => (
 <div className='Film_render_main_block'>
-	 <SwiperSlide key={items.id}>
-     <img src={items.MovieAvatar} className='Image_in_Films_block' />
+
+		<SwiperSlide >
+				<Link to={"/movie-details"}
+ state={{ MovieName: items.MovieName,
+          MovieAvatar: items.MovieAvatar,
+	        YearsOld: items.YearsOld,
+	        rating: items.rating,
+	 Desk: items.Description,
+  Genre: items.genre,
+Duration: items.Duration,
+	 id: items.id,
+	 Video: items.video,
+ }}
+	>
+     <img src={items.MovieAvatar} className='Image_in_Films_block'  key={items.id} alt='Movie-avatar'/>
 	    <div className='Text__down_image'>
 	 <h1 className='Film_render_Names'>{items.MovieName}</h1>
 	        <p className='Film_render_years_rating'>{items.YearsOld} ⭐{items.rating}</p>
+		    
 		    </div>
+					</Link>
 		  </SwiperSlide>
         </div>
 

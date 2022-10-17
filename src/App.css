@@ -6,6 +6,35 @@
   background-color: #F37515;
     cursor: pointer;
 }
+.Delete_From_favorites:hover {
+  scale: 1.1;
+  
+}
+.Delete_From_favorites {
+color: white;
+  transition: ease .2s;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+
+.Image_and_deleteButton {
+  position: relative;
+}
+
+
+.Alredy_add_to_favorites {
+  background-color: #535458;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+.First_text_Favorites {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
 .Filter_block {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -259,7 +288,21 @@ width: 220px;
   border: none;
   color: white;
 }
+.Chose_File_in_register {
+  color: white !important;
+  padding: 0px !important;
+}
 
+.active  * {
+   color: white;
+  background-color: #282C31;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+      transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+  
+}
 .Left_sitebar_icons:hover {
   color: white;
   background-color: #282C31;
@@ -373,7 +416,6 @@ background-color: white;
   justify-content: space-between;
   
 }
-
 
 
 .Image_in_Films_block_search {
